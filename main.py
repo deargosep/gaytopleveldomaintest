@@ -29,4 +29,5 @@ with open('list.json') as json_file:
 
     for i in data:
         if ping(f"gay{i['tlds'][0]}"):
-            db.insert({'country': i['country'], 'tlds': i['tlds'][0]})
+            db.insert(
+                {'country': i['country'], 'tlds': i['tlds'][0], 'url': f"gay{i['tlds']}"})
